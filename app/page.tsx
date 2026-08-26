@@ -111,7 +111,31 @@ export default function Page() {
 
     <section id="ia" className="section ai-section"><SectionHeading eyebrow="07 · Bitácora de inteligencia artificial" title="Herramientas para construir el mundo" copy="Una cadena de producción donde cada herramienta sostiene una parte del lenguaje visual y sonoro."/><div className="tools-grid">{[['Leonardo AI', 'Diseño de personajes y atmósferas', Sparkles], ['Google Flow', 'Movimiento y composición de escenas', Clapperboard], ['ElevenLabs', 'Locución con memoria oral', ScrollText], ['CapCut', 'Montaje, ritmo y subtítulos', Layers3]].map(([name, desc, Icon]) => <div className="tool-card" key={name}><Icon /><h3>{name}</h3><p>{desc}</p><ArrowRight /></div>)}</div><div className="prompt-card"><div className="prompt-head"><span>MASTER PROMPT</span><span>STYLE / KALLAMI-02</span></div><code>“Cinematic 2D illustration inspired by Andean parchment, Cerro Kallami at dusk, deep indigo shadows, terracotta textile accents, ochre light, respectful oral tradition, academic visual language, textured paper grain, wide composition, no text.”</code></div></section>
 
-    <section id="presentacion" className="section presentation-section"><SectionHeading eyebrow="08 · Presentación académica" title="La historia también se expone" copy="Un espacio preparado para proyectar el análisis completo frente a la comunidad universitaria."/><div className="projector"><div className="projector-screen"><div className="slide-placeholder"><p className="eyebrow">Google Slides / Presentación</p><h3>El Cerro Kallami<br /><em>y la Banda Devorada</em></h3><p>Inserta aquí el iframe de tu presentación académica.</p><button className="outline-button">Abrir presentación <ExternalLink /></button></div></div><div className="projector-base"><span /><span /><span /></div></div></section>
+    <section id="presentacion" className="section presentation-section">
+  <SectionHeading 
+    eyebrow="08 · Presentación académica" 
+    title="La historia también se expone" 
+    copy="Un espacio preparado para proyectar el análisis completo frente a la comunidad universitaria."
+  />
+  <div className="projector max-w-5xl mx-auto mt-8">
+    <div className="projector-screen relative aspect-video w-full overflow-hidden rounded-xl shadow-2xl border border-zinc-200 bg-zinc-900">
+      <iframe 
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSp-uZdTyFlS6lzrjHBBBbbe71OoDywEgknRDx9NZVLdb5ud9REh4XRR_6T4zogbcafF1o_1G-RBhtd/pubembed?start=false&loop=false&delayms=3000" 
+        frameBorder="0" 
+        width="100%" 
+        height="100%" 
+        allowFullScreen={true}
+        className="absolute top-0 left-0 w-full h-full"
+        title="Presentación Académica - El Cerro Kallami"
+      />
+    </div>
+    <div className="projector-base flex justify-center items-center gap-2 mt-3">
+      <span className="w-3 h-3 rounded-full bg-zinc-300 inline-block" />
+      <span className="w-3 h-3 rounded-full bg-zinc-300 inline-block" />
+      <span className="w-3 h-3 rounded-full bg-zinc-300 inline-block" />
+    </div>
+  </div>
+</section>
 
     <footer><div className="footer-inner"><div><p className="eyebrow">Conclusión</p><h2>La estabilidad de un sistema<br />empieza por respetar sus protocolos.</h2><p className="footer-copy">Kallami nos recuerda que todo acceso transforma el entorno. Diseñar sistemas sostenibles es aprender a escuchar antes de intervenir.</p></div><div className="credits"><p className="eyebrow">Créditos</p><p>Archivo Oral de la UMSA</p><p>Camila Ayelen Cordova Vasquez</p><p>Ingeniería de Sistemas · 2024</p><span className="footer-mark">K</span></div></div><div className="footer-bottom"><span>UMSA / LA PAZ / BOLIVIA</span><span>FIN DEL RECORRIDO</span></div></footer>
   </main>
