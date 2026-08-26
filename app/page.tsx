@@ -83,7 +83,29 @@ export default function Page() {
 
     <section className="media-section"><div className="media-shell"><div className="media-top"><p className="eyebrow">04 · Pieza audiovisual</p><span>ARCHIVO / 01:55</span></div><div className="video-frame"><iframe src="https://www.youtube.com/embed/taV_quoWXjs" title="El Cerro Kallami y la Banda Devorada" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen /></div><div className="media-caption"><h2>La banda devorada</h2><div className="badges"><span>Duración: 01:55</span><span>Full HD</span><span>Estilo: 2D Pergamino Andino</span></div></div></div></section>
 
-    <section id="storyboard" className="section storyboard-section"><SectionHeading eyebrow="05 · Storyboard" title="Doce escenas, una sola puerta" copy="La progresión visual del relato: del ruido inicial a la escucha compartida."/><div className="scene-grid">{scenes.map(([id, desc, voice]) => <article className="scene-card" key={id}><div className="scene-art"><span>{id}</span><Film /></div><p className="eyebrow">{id}</p><h3>{desc}</h3><p className="voice">{voice}</p></article>)}</div></section>
+   <section id="storyboard" className="section storyboard-section">
+  <SectionHeading 
+    eyebrow="05 · Storyboard" 
+    title="Doce escenas, una sola puerta" 
+    copy="La progresión visual del relato: del ruido inicial a la escucha compartida."
+  />
+  <div className="scene-grid">
+    {scenes.map(([id, desc, voice]) => (
+      <article className="scene-card overflow-hidden" key={id}>
+        <div className="scene-art relative overflow-hidden aspect-video w-full">
+          <img 
+            src={`/escenas/${id}.jpg`} 
+            alt={desc} 
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+          />
+        </div>
+        <p className="eyebrow">{id}</p>
+        <h3>{desc}</h3>
+        <p className="voice">{voice}</p>
+      </article>
+    ))}
+  </div>
+</section>
 
     <section className="section flow-section"><SectionHeading eyebrow="06 · Secuencia formal" title="Del conflicto al resultado" copy="Una lectura sistémica de la leyenda, expresada como flujo de información y decisiones."/><FlowDiagram /></section>
 
