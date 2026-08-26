@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#F2E6CC"></rect>
+
+  <!-- Cerro Kallami -->
+  <path d="M8 48 L20 34 L27 40 L38 19 L56 48 Z" fill="#5C4635"></path>
+
+  <!-- Luz / apertura del cerro -->
+  <path d="M35 42 Q38 35 41 42 Q38 45 35 42" fill="#D89B3C"></path>
+
+  <!-- Onda musical -->
+  <path d="M13 52 Q19 47 25 52 T37 52 T49 52" fill="none" stroke="#9A6A32" stroke-width="3" stroke-linecap="round"></path>
+</svg>
